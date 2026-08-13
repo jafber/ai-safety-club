@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-main">
+      <div class="footer-note">
+        {{ if .IsHome }}<p class="photo-note">All photos on this page are real and not AI-generated.</p>{{ end }}
+        <p>HAIS is an independent student initiative at Hasso Plattner Institute. This is not an official HPI website and does not represent the views of HPI.</p>
+      </div>
+      <div class="sponsors">
+        <p>Proudly sponsored by</p>
+        <div class="partner-logos" aria-label="Sponsors">
+          <a href="https://hpi.de/" rel="external"><img src="{{ "images/partners/hpi.webp" | relURL }}" width="250" height="250" alt="Hasso Plattner Institute"></a>
+          <a class="pathfinder" href="https://pathfinder.kairos-project.org/" rel="external"><img src="{{ "images/partners/pathfinder.webp" | relURL }}" width="316" height="64" alt="Pathfinder program"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Design inspired by <a href="https://caish.org/" rel="external">CAISH</a>. Built with <a href="https://gohugo.io/" rel="external">Hugo</a>. <a href="https://github.com/jafber/ai-safety-club" rel="external">Source on GitHub</a>.</p>
+      <nav aria-label="Legal">
+        <a href="{{ "impressum/" | relURL }}">Impressum</a>
+        <a href="{{ "datenschutz/" | relURL }}">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>

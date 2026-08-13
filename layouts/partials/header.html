@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="shell nav-wrap">
+    <a class="wordmark" href="{{ site.Home.RelPermalink }}" aria-label="HAIS home">HAIS</a>
+    {{ if .IsHome }}
+    <nav aria-label="Main navigation">
+      <a href="#activities">What we do</a>
+      <a href="#contact">Contact</a>
+      <a href="#events">Events</a>
+      <a href="#organizers">Organizers</a>
+    </nav>
+    {{ end }}
+  </div>
+</header>

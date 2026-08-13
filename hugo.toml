@@ -1,0 +1,10 @@
+baseURL = "https://jafber.github.io/ai-safety-club/"
+languageCode = "en"
+title = "HAIS - HPI AI Safety Club"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  description = "Building the AI safety community at Hasso Plattner Institute in Potsdam."
+
+[markup.goldmark.renderer]
+  unsafe = true
