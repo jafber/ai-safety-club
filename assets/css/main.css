@@ -32,12 +32,12 @@ section[id] { scroll-margin-top: 84px; }
 .site-header nav a { font-size: .84rem; text-decoration: none; }
 .site-header nav a:hover, .site-header nav a:focus-visible { text-decoration: underline; }
 
-.feature { display: grid; grid-template-columns: minmax(0, .93fr) minmax(380px, 1.07fr); gap: clamp(3rem, 6vw, 6rem); align-items: center; padding-block: clamp(4rem, 8vw, 7rem); border-bottom: 2px solid var(--line); }
+.feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); gap: clamp(3rem, 6vw, 6rem); align-items: center; padding-block: clamp(4rem, 8vw, 7rem); border-bottom: 2px solid var(--line); }
 .feature-copy { max-width: 650px; }
 .feature-copy > p { color: #3f3c36; }
 .feature-copy > .action-link { margin-top: 1rem; }
-.feature-image { width: 100%; height: clamp(240px, 28vw, 350px); object-fit: cover; }
-.stakes { grid-template-columns: minmax(380px, 1.07fr) minmax(0, .93fr); }
+.feature-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.stakes { grid-template-columns: minmax(360px, .9fr) minmax(0, 1.1fr); }
 .stakes h2 { margin-bottom: 1.5rem; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.05; letter-spacing: -.025em; }
 h1 { max-width: 650px; margin: 0 0 2rem; font-size: clamp(2.8rem, 4.5vw, 4.75rem); }
@@ -81,6 +81,12 @@ h2 { margin: 0; font-size: clamp(2.25rem, 3.4vw, 3.5rem); }
 .legal-content h2 { margin: 2.5rem 0 1rem; font-size: 2rem; }
 .legal-content p, .legal-content li { color: #47433c; }
 
+@media (min-width: 901px) {
+  .feature-image { width: calc(100% + clamp(3rem, 6vw, 6rem)); max-width: none; }
+  .hero .feature-image { margin-right: calc(clamp(3rem, 6vw, 6rem) * -1); }
+  .stakes .feature-image { margin-left: calc(clamp(3rem, 6vw, 6rem) * -1); }
+}
+
 @media (max-width: 900px) {
   :root { --shell: min(100% - 32px, 720px); }
   .site-header nav a:nth-child(-n+2) { display: none; }
@@ -99,7 +105,7 @@ h2 { margin: 0; font-size: clamp(2.25rem, 3.4vw, 3.5rem); }
   .site-header nav a { font-size: .77rem; }
   h1 { font-size: clamp(2.6rem, 12vw, 3.5rem); }
   .feature { padding-block: 3.5rem 4.5rem; }
-  .feature-image { width: 100%; height: clamp(220px, 65vw, 340px); }
+  .feature-image { width: 100%; height: auto; }
   .calendar-wrap { height: 480px; }
   .people { grid-template-columns: 1fr; gap: 3rem; }
   .footer-bottom { flex-direction: column; }
